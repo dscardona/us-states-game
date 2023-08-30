@@ -10,10 +10,12 @@ screen.addshape(image)
 # Set turtle shape to image
 turtle.shape(image)
 
-# Get coordinates of click
-def get_mouse_click_coor(x, y):
-    print(x, y)
+# # Get coordinates of click
+# def get_mouse_click_coor(x, y):
+#     print(x, y)
 
-turtle.onscreenclick(get_mouse_click_coor)
+# turtle.onscreenclick(get_mouse_click_coor)
+
+# Alternative to screen.exitonclick(), keeps window open
 turtle.mainloop()
 
