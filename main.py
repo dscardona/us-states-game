@@ -10,6 +10,9 @@ screen.addshape(image)
 # Set turtle shape to image
 turtle.shape(image)
 
+# Pop up with prompt to enter State
+answer_state = screen.textinput(title="Guess the State", prompt="What's another State's name?")
+
 # # Get coordinates of click
 # def get_mouse_click_coor(x, y):
 #     print(x, y)
