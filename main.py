@@ -21,8 +21,7 @@ states_list = states.to_list()
 correct_answers = []
 
 # Game loop
-game_is_on = True
-while game_is_on:
+while correct_answers < 50:
 
     # Pop-up with prompt to enter State
     answer_state = screen.textinput(title="Guess the State", prompt="What's another State's name?").title()
