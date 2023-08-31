@@ -28,7 +28,14 @@ while game_is_on:
     answer_state = screen.textinput(title="Guess the State", prompt="What's another State's name?").title()
 
     if answer_state in states_list:
-        pass
+        state_turtle = Turtle()
+        state_turtle.penup()
+        state_turtle.hideturtle()
+        state_data = data[data.state == answer_state]
+        state_turtle.goto(int(state_data.x), int(state_data.y))
+        state_turtle.write(answer_state, align="left", font=("Courier", 12, "normal"))
+
+        correct_answers.append(answer_state)
     else:
         pass
 
