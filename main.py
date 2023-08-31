@@ -21,10 +21,10 @@ states_list = states.to_list()
 correct_answers = []
 
 # Game loop
-while correct_answers < 50:
+while len(correct_answers) < 50:
 
     # Pop-up with prompt to enter State
-    answer_state = screen.textinput(title="Guess the State", prompt="What's another State's name?").title()
+    answer_state = screen.textinput(title=f"{len(correct_answers)}/50 States Correct", prompt="What's another State's name?").title()
 
     if answer_state in states_list:
         state_turtle = Turtle()
