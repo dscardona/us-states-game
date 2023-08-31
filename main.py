@@ -26,6 +26,17 @@ while len(correct_answers) < 50:
     # Pop-up with prompt to enter State
     answer_state = screen.textinput(title=f"{len(correct_answers)}/50 States Correct", prompt="What's another State's name?").title()
 
+    # Option to exit game and get csv with missed States
+    if answer_state == "Exit":
+        missing_states = []
+        for state in states_list:
+            if state not in correct_answers:
+                missing_states.append(state)
+        new_data = pandas.DataFrame(missing_states)
+        new_data.to_csv("states_to_learn.csv")
+        break
+
+    # Write correct guess on map
     if answer_state in states_list:
         state_turtle = Turtle()
         state_turtle.penup()
